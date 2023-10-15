@@ -11,24 +11,14 @@
 </head>
 <body>
 
-    <div 
-        id="loader"
-        class="fixed left-0 top-0 z-999999 flex h-screen w-screen items-center justify-center bg-white dark:bg-black">
-        <div class="h-16 w-16 animate-spin rounded-full border-4 border-solid border-blue-500 border-t-transparent"></div>
-    </div>
+
+  @include('components.common.Loader')
 
     <div class="flex h-screen overflow-hidden">
-        <aside class="w-72 bg-black-gray">
-            <div class="flex justify-center px-6 py-2 lg:py-3">
-                <a href="#">
-                    <img src="{{asset("assets/images/aa.jpg")}}" alt="">
-                </a>
-            </div>
-        </aside>
-        <div class="w-10/12">
-            <header>
-                Header Area
-            </header>
+            @include('components.admin.sidebar')
+
+        <div class="">
+           @include('components.admin.header')
             <main>
                 @yield('admincontent')
             </main>
